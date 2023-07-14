@@ -10,27 +10,38 @@
     <link rel="stylesheet" href="../resources/css/login.css">
     <title>Iniciar Sesión</title>
     <style>
-
+        .login-container {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
 <body>
     <div class="center-content">
-        <img class="logo" src="images/logoCL.png" alt="Logo">
+        <div><img class="logo" src="images/logoCL.png" alt="Logo"></div>
+        <div class="login-container">
 
-        <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
 
-        <form action="/app/controlador/login.php" method="POST" onsubmit="return validateForm()">
-            <div class="form-floating">
-                <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de usuario" required>
-                <br>
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
-                <br>
-            </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
-        </form>
+            <h1 class="h3 mb-3 fw-normal">Iniciar sesión</h1>
+
+            <form action="/app/controlador/login.php" method="POST" onsubmit="return validateForm()">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="username" name="username"
+                        placeholder="Nombre de usuario" required>
+                    <br>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"
+                        required>
+                    <br>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
+            </form>
+        </div>
     </div>
 
     <!-- JavaScript de Bootstrap y jQuery -->
