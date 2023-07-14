@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UsuarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,46 +14,53 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-   //return view('welcome');
-   return "Bienvenido a la pagina principal este sera el login";
+Route::get('/', HomeController::class);
+
+Route::controller(UsuarioController::class)->group(function () {
+    Route::get('usuarios/index', 'index');
+    Route::get('usuarios/create', 'create');
+    Route::get('usuarios/modify', 'modify');
+    Route::get('usuarios/delete', 'delete');
+    Route::get('usuarios/show', 'show');
 });
 
-Route::get('usuarios',function(){
-    return "bienvenido a la pagina usuarios";
-});
-
-Route::get('conteos',function(){
+Route::get('conteos', function () {
     return "bienvenido a la pagina conteos";
 });
-Route::get('productos',function(){
+Route::get('productos', function () {
     return "bienvenido a la pagina productos";
 });
-Route::get('marcas/',function(){
+Route::get('marcas', function () {
     return "bienvenido a la pagina Marcas";
 });
-Route::get('fabricantes',function(){
+Route::get('fabricantes', function () {
     return "bienvenido a la pagina fabricantes";
 });
-Route::get('proveedores',function(){
+Route::get('proveedores', function () {
     return "bienvenido a la pagina usuarios";
 });
-Route::get('ubicaciones',function(){
+Route::get('ubicaciones', function () {
     return "bienvenido a la pagina ubicaciones";
 });
 
-Route::get('lineas',function(){
+Route::get('lineas', function () {
     return "bienvenido a la pagina lineas";
 });
-Route::get('unidades',function(){
+Route::get('unidades', function () {
     return "bienvenido a la pagina unidades";
 });
-Route::get('ordenes',function(){
+Route::get('ordenes', function () {
     return "bienvenido a la pagina ordenes";
 });
-Route::get('incidencias',function(){
+Route::get('incidencias', function () {
     return "bienvenido a la pagina incidencias";
 });
-Route::get('faltantes',function(){
+Route::get('faltantes', function () {
     return "bienvenido a la pagina faltantes";
+});
+Route::get('productos/{producto}', function ($producto) {
+    return "bienenido a mi vista $producto del catalogo producto";
+});
+
+Route::get('users/{id}', function ($id) {
 });

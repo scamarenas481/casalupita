@@ -1,0 +1,73 @@
+/* Estilos globales para todo el proyecto */
+
+body {
+
+    background-color: #f5f5f5;
+  }
+
+
+  .btn-primary {
+    background-color: #007bff; /* Color azul de construrama */
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #ff5800; /* Color naranja Pantone al pasar el cursor */
+    border-color: #ffffff;
+    transform: scale(1.15); /* Aumenta el tamaño en un 15% */
+  }
+
+
+  .btn-buscar {
+    background-color: #007BDF;
+    /* Color azul Construrama */
+    color: #FFFFFF;
+    /* Texto blanco */
+}
+
+.nav-link {
+    color: #FFFFFF;
+}
+
+.btn-buscar:hover {
+    background-color: #FF4500;
+    /* Color naranja Pantone al hacer hover */
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: white;
+}
+
+.navbar {
+    color: #FFFFFF;
+}
+
+.navbar-brand {
+    color: #FFFFFF;
+}
+
+.navbar-nav .nav-link.active {
+    color: #FF4500;
+
+}
+
+.nav-link {
+    color: #FFFFFF;
+}
+
+.bg-light-gray {
+    --prymary: 200;
+    /* Valor personalizado para el nivel de gris (0-255) */
+    --bg-opacity: 1;
+    background-color: rgba(var(--gray), var(--gray), var(--gray), var(--bg-opacity)) !important;
+}
+
+.dropdown-item{
+    color: #FFFFFF;
+}
+.dropdown-menu {
+    --bs-dropdown-link-hover-bg:  #FF4500;
+    --bs-dropdown-link-hover-color: whitesmoke;
+}
+
